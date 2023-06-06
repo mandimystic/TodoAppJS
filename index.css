@@ -1,0 +1,203 @@
+
+
+:root{
+    --purple: #581c87;
+    --lightpurple: #c084fc;
+    --highlight: #c4b5fd;
+    --black: #09090b;
+    }
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    background-color: #581c87;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+h1{
+    font-size:x-large;
+    margin-top: 5rem;
+    color:white;
+    text-align: center;
+}
+
+form{
+    width: 50%;
+    text-align: center;
+    margin: 2rem auto;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: #c4b5fd;
+}
+
+.input-tarea{
+    width: 80%;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    }
+    
+.input-tarea::placeholder{
+        color:#c4b5fd;
+        border-style: none;
+        outline: none;
+    }
+
+.input-tarea:focus{
+        outline: none;
+    }  
+
+.add-btn{
+    background-color: transparent;
+    color: #c4b5fd;
+    border: 2px solid;
+    border-radius: 50%;
+    border-color: #c4b5fd;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.5rem;
+}
+
+#list{
+    background-color: #c084fc;
+    border: 1px solid;
+    border-radius: 16px;
+    border-color: #c4b5fd;
+    margin: 1rem auto; 
+    width: 70%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    overflow: auto;
+    max-height: 25rem;
+}
+
+
+.tarea-added{
+    margin-top: 1rem;
+    width: 70%;
+    background-color: transparent;
+    border-style: none;
+    color:#09090b;
+    overflow: scroll;
+}
+
+.delete-btn{
+    border-style: none;
+    width: 2rem;
+    height: 2rem;
+    background-color:#c084fc;
+    color:#581c87
+}
+
+.check-btn{
+    border-style: none;
+    background-color: transparent;
+    width: 1rem;
+    height: 1rem;
+}
+
+
+#stats{
+    background-color: #c4b5fd;
+    width: 70%;
+    margin: 0 auto;
+    font-size: small;
+    margin-top: 2rem;
+    color: black;
+}
+
+@media(min-width:768px){
+
+    #list{
+        margin: 1rem auto; 
+        width: 50%;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        max-height: 25rem;
+        overflow: auto;
+    }
+
+    #stats{
+        background-color: #c4b5fd;
+        width: 30%;
+        align-self: stretch;
+        margin: 0 auto;
+        font-size: small;
+        margin-top: 2rem;
+        color: black;
+        text-align: center;
+    }
+
+    .tarea-added{
+        width: auto;
+        margin: auto;
+        background-color: transparent;
+        border-style: none;
+        color: white;
+    }
+
+    .input-tarea{
+        width: 80%;
+        height: 2rem;
+        font-size: medium;
+        background-color: transparent;
+        border: none;
+        text-align: center;
+        }
+
+
+}
+
+@media(min-width:1024px){
+
+    #list{
+        margin: 1rem auto; 
+        width: 50%;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        max-height: 25rem;
+        overflow: auto;
+    }
+
+    .tarea-added{
+        width: auto;
+        margin: auto;
+        background-color: transparent;
+        border-style: none;
+        color: white;
+    }
+
+    #stats{
+        background-color: #c4b5fd;
+        width: 50%;
+        align-self: stretch;
+        margin: 0 auto;
+        font-size: large;
+        margin-top: 2rem;
+        color: black;
+        text-align: center;
+    }
+
+    .input-tarea{
+        width: 80%;
+        height: 2rem;
+        font-size: large;
+        background-color: transparent;
+        border: none;
+        text-align: center;
+        }
+
+}
