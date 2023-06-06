@@ -31,7 +31,7 @@ li.innerHTML = `
     
     list.append(li);
 
-    localStorage.setItem("listaContactos", list.innerHTML);
+    localStorage.setItem("TodoApp", list.innerHTML);
 
     input.value = ""
 
@@ -46,7 +46,7 @@ li.innerHTML = `
         let pendientes = list.querySelectorAll(".check-btn");
         let checkbox = list.querySelectorAll(".check-btn:checked");
         stats.innerHTML = `Pending tasks: ${(pendientes.length-checkbox.length)} Already done: ${checkbox.length}`
-        localStorage.setItem("listaContactos", list.innerHTML);
+        localStorage.setItem("TodoApp", list.innerHTML);
     };
 
 
@@ -55,7 +55,7 @@ li.innerHTML = `
 list.addEventListener("click", e => {
     if (e.target.closest(".check-btn")) {
         updateStats();
-        localStorage.setItem("listaContactos", list.innerHTML);
+        localStorage.setItem("TodoApp", list.innerHTML);
     }
 
 // PREGUNTA COMO HACER PARA QUE SE RESTEN LAS PENDIENTES, SOLO ME CUENTA LAS CHECKED 
@@ -68,7 +68,7 @@ list.addEventListener("click", e => {
     if (e.target.closest(".delete-btn")){
         updateStats()
         e.target.closest(".delete-btn").parentElement.remove()
-        localStorage.setItem("listaContactos",list.innerHTML);
+        localStorage.setItem("TodoApp",list.innerHTML);
     }
 
 });
@@ -76,7 +76,7 @@ list.addEventListener("click", e => {
 // siempre este guardado 
 
 (() => {
-    const localList = localStorage.getItem ("listaContactos");
+    const localList = localStorage.getItem ("TodoApp");
     list.innerHTML = localList
     updateStats()
 
